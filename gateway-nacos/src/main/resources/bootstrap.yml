@@ -1,0 +1,17 @@
+server:
+  port: 8084
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      routes:
+        - id: gateway-nacos-route-0
+          uri: lb://consumer-nacos
+          predicates:
+            - Path=/api-data/**
+          filters:
+            - StripPrefix=1
+  application:
+    name: gateway-nacos

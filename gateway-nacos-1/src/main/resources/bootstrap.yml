@@ -1,0 +1,22 @@
+server:
+  port: 8085
+spring:
+  cloud:
+    #配置nacos服务
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+    #配置gateway
+    gateway:
+      routes:
+        - id: gateway_route_consumer_nacos_data
+          uri: lb:// consumer-nacos
+          predicates:
+            - Path=/api/**
+          filters:
+            #去掉过滤链匹配的第一个参数
+            - StripPrefix=1
+  application:
+    name: gateway-route-1
+

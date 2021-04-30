@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="provider-nacos" />
+        <module name="bus-nacos" />
+        <module name="consumer-nacos" />
+        <module name="provider-nacos-1" />
+        <module name="gateway-nacos-1" />
+        <module name="gateway-nacos" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bus-nacos" options="-parameters" />
+      <module name="consumer-nacos" options="-parameters" />
+      <module name="gateway-nacos" options="-parameters" />
+      <module name="gateway-nacos-1" options="-parameters" />
+      <module name="provider-nacos" options="-parameters" />
+      <module name="provider-nacos-1" options="-parameters" />
+    </option>
+  </component>
+</project>
